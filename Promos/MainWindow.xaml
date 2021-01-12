@@ -1,0 +1,51 @@
+﻿<Window x:Class="Promos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Promos"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="488" Width="798">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Margin="47,59,0,18" Stroke="Black" Width="498"/>
+        <Rectangle HorizontalAlignment="Left" Height="154" Margin="572,59,0,0" Stroke="Black" VerticalAlignment="Top" Width="178"/>
+        <Label Content="Kafetaria&#xD;&#xA;" HorizontalAlignment="Left" Margin="38,20,0,0" VerticalAlignment="Top"/>
+        <Label Content="Voucher Belanja" HorizontalAlignment="Left" Margin="582,64,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Subtotal" HorizontalAlignment="Left" Margin="377,367,0,0" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Margin="572,220,0,18" Stroke="Black" Width="178"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="382,391,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.393,0.541"/>
+        <Rectangle VerticalAlignment="Top" Fill="LightGray" Height="0" Margin="61,286,477,0"/>
+        <Label Content="Rp 0" Name="labelSubtotal" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="471,368,0,0" VerticalAlignment="Top" Width="62"/>
+        <Label x:Name="labelPromoFee" Content="Rp 0" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Margin="471,391,0,0" VerticalAlignment="Top" Width="62"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="572,220,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelGrantTotal" Content="Rp 0" HorizontalAlignment="Left" Margin="587,265,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22"/>
+        <Label Content="Item Pesanan" HorizontalAlignment="Left" Margin="56,64,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ListBox x:Name="listBoxPesanan" Margin="56,95,267,217" MouseLeftButtonUp="listBoxPesanan_ItemClicked">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25" />
+                            <RowDefinition Height="15" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="{Binding title}" TextAlignment="Left" />
+                        <TextBlock Grid.Row="1" Text="{Binding price}"  TextAlignment="Left" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="buttonAddItem" Content="Tambah Pesanan" HorizontalAlignment="Left" Width="126" Height="46" VerticalAlignment="Top" Margin="56,371,0,0" Click="onButtonAddItemClicked" BorderBrush="{x:Null}" Background="#FF1FE09A"/>
+        <Label Content="Voucher yang digunakan&#xD;&#xA;" HorizontalAlignment="Left" Margin="56,239,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ListBox x:Name="listBoxPakaiVoucher" Margin="56,265,267,120" MouseLeftButtonUp="listBoxPakaiVoucher_ItemClicked">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <TextBlock Grid.Row="0" Text="{Binding title}" TextAlignment="Left" />
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Gunakan voucher belanaja&#xD;&#xA;untuk mendapatkan &#xD;&#xA;potongan harga&#xD;&#xA;" HorizontalAlignment="Left" Margin="582,98,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="165" Height="61"/>
+        <Button x:Name="PilihVoucher" Content="Pilih Voucher" HorizontalAlignment="Left" Margin="587,164,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="OnPilihVoucherClicked" Background="#FF1FE09A" BorderBrush="{x:Null}"/>
+    </Grid>
+</Window>
