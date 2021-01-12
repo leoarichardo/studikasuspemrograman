@@ -1,3 +1,6 @@
+Leo Adi Richardo
+19.11.2796
+
 # STUDIKASUSPROMOS 
 Aplikasi ini bertujuan seperti simulasi pembelian makanan dan minuman dengan menggunakan promo/voucher.
 
@@ -95,5 +98,4 @@ untuk di masukan dalam sebuah list KeranjangBelanja. Dan tampilan Total dari sem
             }
         }
 ```
-# studikasuspemrograman
-# studikasuspemrograman
+
